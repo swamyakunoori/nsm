@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EmployeeModule } from './controllers/employee/employee.module';
+import { NoticeboardModule } from './controllers/noticeboard/noticeboard.module';
 import { PaymentsModule } from './controllers/payments/payments.module';
 import { PaymentTypeModule } from './controllers/payment_type/payment_type.module';
 import { RoleModule } from './controllers/role/role.module';
@@ -26,7 +27,8 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     TaxesModule,
     SupplierModule,
     PaymentTypeModule,
-    PaymentsModule
+    PaymentsModule,
+    NoticeboardModule
   ],
   controllers: [AppController],
   providers: [AppService],
