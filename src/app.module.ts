@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CategoryModule } from './controllers/category/category.module';
 import { EmployeeModule } from './controllers/employee/employee.module';
 import { NoticeboardModule } from './controllers/noticeboard/noticeboard.module';
 import { PaymentsModule } from './controllers/payments/payments.module';
@@ -30,7 +31,8 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     PaymentTypeModule,
     PaymentsModule,
     NoticeboardModule,
-    PurchaseModule
+    PurchaseModule,
+    CategoryModule
   ],
   controllers: [AppController],
   providers: [AppService],
