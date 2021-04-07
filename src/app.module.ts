@@ -6,6 +6,9 @@ import { BatchModule } from './controllers/batch/batch.module';
 import { BillModule } from './controllers/bill/bill.module';
 import { CategoryModule } from './controllers/category/category.module';
 import { EmployeeModule } from './controllers/employee/employee.module';
+import { ExpensesModule } from './controllers/expenses/expenses.module';
+import { ExpenseTypeModule } from './controllers/expense_type/expense_type.module';
+import { MedicineModule } from './controllers/medicines/medicines.module';
 import { NoticeboardModule } from './controllers/noticeboard/noticeboard.module';
 import { PaymentsModule } from './controllers/payments/payments.module';
 import { PaymentTypeModule } from './controllers/payment_type/payment_type.module';
@@ -36,7 +39,10 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     PurchaseModule,
     CategoryModule,
     BillModule,
-    BatchModule
+    BatchModule,
+    MedicineModule,
+    ExpenseTypeModule,
+    ExpensesModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -1,16 +1,19 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Category {
+export class ExpenseType {
     @PrimaryGeneratedColumn()
-    mcId: number;
+    etId: number;
 
     @Column()
-    mcName: string;
+    etName: string;
+
+    @Column()
+    etDescription: string;
 
     @Column({ type: 'timestamp' })
-    mcCreatedAt: Date;
+    etCreatedAt: Date;
 
     @Column({ default: 1 })
-    mcStatus: number
+    etStatus: number
 }
