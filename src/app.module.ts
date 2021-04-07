@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EmployeeModule } from './controllers/employee/employee.module';
 import { RoleModule } from './controllers/role/role.module';
+import { TaxesModule } from './controllers/taxes/taxes.module';
 
 @Module({
   imports: [
@@ -18,7 +19,8 @@ import { RoleModule } from './controllers/role/role.module';
       synchronize: true,
     }),
     RoleModule,
-    EmployeeModule
+    EmployeeModule,
+    TaxesModule
   ],
   controllers: [AppController],
   providers: [AppService],
