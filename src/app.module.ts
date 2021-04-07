@@ -6,6 +6,7 @@ import { EmployeeModule } from './controllers/employee/employee.module';
 import { NoticeboardModule } from './controllers/noticeboard/noticeboard.module';
 import { PaymentsModule } from './controllers/payments/payments.module';
 import { PaymentTypeModule } from './controllers/payment_type/payment_type.module';
+import { PurchaseModule } from './controllers/purchase/purchase.module';
 import { RoleModule } from './controllers/role/role.module';
 import { SupplierModule } from './controllers/suppliers/suppliers.module';
 import { TaxesModule } from './controllers/taxes/taxes.module';
@@ -28,7 +29,8 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     SupplierModule,
     PaymentTypeModule,
     PaymentsModule,
-    NoticeboardModule
+    NoticeboardModule,
+    PurchaseModule
   ],
   controllers: [AppController],
   providers: [AppService],
