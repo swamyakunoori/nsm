@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EmployeeModule } from './controllers/employee/employee.module';
 import { RoleModule } from './controllers/role/role.module';
+import { SupplierModule } from './controllers/suppliers/suppliers.module';
 import { TaxesModule } from './controllers/taxes/taxes.module';
 
 @Module({
@@ -20,7 +21,8 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     }),
     RoleModule,
     EmployeeModule,
-    TaxesModule
+    TaxesModule,
+    SupplierModule
   ],
   controllers: [AppController],
   providers: [AppService],
