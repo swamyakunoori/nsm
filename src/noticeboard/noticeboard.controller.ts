@@ -1,8 +1,10 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { NoticeboardService } from './noticeboard.service';
 import { CreateNoticeboardDto } from './dto/create-noticeboard.dto';
 import { UpdateNoticeboardDto } from './dto/update-noticeboard.dto';
 
+@ApiTags("Noticeboard API")
 @Controller('noticeboard')
 export class NoticeboardController {
   constructor(private readonly noticeboardService: NoticeboardService) {}
