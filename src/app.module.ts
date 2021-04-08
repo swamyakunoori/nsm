@@ -5,6 +5,8 @@ import { AppService } from './app.service';
 import { BatchModule } from './controllers/batch/batch.module';
 import { BillModule } from './controllers/bill/bill.module';
 import { CategoryModule } from './controllers/category/category.module';
+import { CustomersModule } from './controllers/customers/customers.module';
+import { DoctorsModule } from './controllers/doctors/doctors.module';
 import { EmployeeModule } from './controllers/employee/employee.module';
 import { ExpensesModule } from './controllers/expenses/expenses.module';
 import { ExpenseTypeModule } from './controllers/expense_type/expense_type.module';
@@ -42,7 +44,9 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     BatchModule,
     MedicineModule,
     ExpenseTypeModule,
-    ExpensesModule
+    ExpensesModule,
+    DoctorsModule,
+    CustomersModule
   ],
   controllers: [AppController],
   providers: [AppService],
