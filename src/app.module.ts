@@ -2,21 +2,22 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BillModule } from './controllers/bill/bill.module';
-import { CategoryModule } from './controllers/category/category.module';
-import { CustomersModule } from './controllers/customers/customers.module';
-import { DoctorsModule } from './controllers/doctors/doctors.module';
-import { EmployeeModule } from './controllers/employee/employee.module';
-import { ExpensesModule } from './controllers/expenses/expenses.module';
-import { ExpenseTypeModule } from './controllers/expense_type/expense_type.module';
-import { MedicineModule } from './controllers/medicines/medicines.module';
-import { NoticeboardModule } from './controllers/noticeboard/noticeboard.module';
-import { PaymentsModule } from './controllers/payments/payments.module';
-import { PaymentTypeModule } from './controllers/payment_type/payment_type.module';
-import { PurchaseModule } from './controllers/purchase/purchase.module';
-import { RoleModule } from './controllers/role/role.module';
-import { SupplierModule } from './controllers/suppliers/suppliers.module';
-import { TaxesModule } from './controllers/taxes/taxes.module';
+import { BatchModule } from './batch/batch.module';
+import { BillModule } from './bill/bill.module';
+import { CategoryModule } from './category/category.module';
+import { CustomersModule } from './customers/customers.module';
+import { DoctorsModule } from './doctors/doctors.module';
+import { EmployeeModule } from './employee/employee.module';
+import { ExpenseTypeModule } from './expense-type/expense-type.module';
+import { ExpensesModule } from './expenses/expenses.module';
+import { MedicinesModule } from './medicines/medicines.module';
+import { NoticeboardModule } from './noticeboard/noticeboard.module';
+import { PaymentTypeModule } from './payment-type/payment-type.module';
+import { PaymentsModule } from './payments/payments.module';
+import { PurchaseModule } from './purchase/purchase.module';
+import { RoleModule } from './role/role.module';
+import { SuppliersModule } from './suppliers/suppliers.module';
+import { TaxesModule } from './taxes/taxes.module';
 
 @Module({
   imports: [
@@ -33,18 +34,19 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     RoleModule,
     EmployeeModule,
     TaxesModule,
-    SupplierModule,
     PaymentTypeModule,
     PaymentsModule,
     NoticeboardModule,
     PurchaseModule,
     CategoryModule,
     BillModule,
-    MedicineModule,
     ExpenseTypeModule,
     ExpensesModule,
     DoctorsModule,
     CustomersModule,
+    BatchModule,
+    MedicinesModule,
+    SuppliersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
