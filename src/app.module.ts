@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BatchModule } from './controllers/batch/batch.module';
 import { BillModule } from './controllers/bill/bill.module';
 import { CategoryModule } from './controllers/category/category.module';
 import { CustomersModule } from './controllers/customers/customers.module';
@@ -41,12 +40,11 @@ import { TaxesModule } from './controllers/taxes/taxes.module';
     PurchaseModule,
     CategoryModule,
     BillModule,
-    BatchModule,
     MedicineModule,
     ExpenseTypeModule,
     ExpensesModule,
     DoctorsModule,
-    CustomersModule
+    CustomersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
