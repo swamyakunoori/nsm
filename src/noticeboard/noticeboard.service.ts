@@ -1,26 +1,34 @@
 import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 import { CreateNoticeboardDto } from './dto/create-noticeboard.dto';
 import { UpdateNoticeboardDto } from './dto/update-noticeboard.dto';
+import { Noticeboard } from './entities/noticeboard.entity';
 
 @Injectable()
 export class NoticeboardService {
+  constructor(
+    @InjectRepository(Noticeboard)
+    private readonly noticeboardRepository: Repository<Noticeboard>,
+  ) { }
+
   create(createNoticeboardDto: CreateNoticeboardDto) {
-    return 'This action adds a new noticeboard';
+    return this.noticeboardRepository.save(createNoticeboardDto);
   }
 
   findAll() {
-    return `This action returns all noticeboard`;
+    return this.noticeboardRepository.find();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} noticeboard`;
+    return this.noticeboardRepository.findOne(id);
   }
 
   update(id: number, updateNoticeboardDto: UpdateNoticeboardDto) {
-    return `This action updates a #${id} noticeboard`;
+    return this.noticeboardRepository.update(id, updateNoticeboardDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} noticeboard`;
+    return this.noticeboardRepository.delete(id);
   }
 }

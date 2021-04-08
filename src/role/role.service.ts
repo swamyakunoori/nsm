@@ -11,6 +11,7 @@ export class RoleService {
     @InjectRepository(Role)
     private readonly roleRepository: Repository<Role>,
   ) { }
+  
   create(createRoleDto: CreateRoleDto) {
     return this.roleRepository.save(createRoleDto);
   }
